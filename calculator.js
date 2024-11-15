@@ -23,6 +23,7 @@ function calculator() {
     };
 
     const divide = (x, y) => {
+        if (y === 0) throw new Error("you can't divide by 0");
         numCheck(x);
         numCheck(y);
         return x / y;
