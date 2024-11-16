@@ -5,7 +5,7 @@ test("simple", () => {
 });
 
 test("end", () => {
-    expect(caesarCipher("xyz", 2)).toBe("abc");
+    expect(caesarCipher("xyz", 3)).toBe("abc");
 });
 
 test("case preservation", () => {
@@ -15,3 +15,7 @@ test("case preservation", () => {
 test("punctuation", () => {
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
+
+test("wrong number", () => {
+    expect(() => caesarCipher("xyz", 8)).toThrow();
+})
